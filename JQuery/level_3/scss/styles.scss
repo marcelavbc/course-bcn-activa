@@ -1,0 +1,76 @@
+@import "helpers/variables";
+
+
+body {
+    background: $background;
+}
+
+.content {
+    height: 100vh;
+}
+
+.flip {
+    -webkit-perspective: 800;
+    perspective: 800;
+    position: relative;
+
+}
+
+.flip .card.flipped {
+    -webkit-transform: $rotateX;
+    transform: $rotateX;
+    background: transparent;
+}
+
+.flip .card {
+    width: 500px;
+    height: 300px;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 0.5s;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+
+}
+
+.flip .card .face {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    z-index: 2;
+    background-color: $card-background;
+}
+
+.flip .card .front {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.flip .card .back {
+    -webkit-transform: $rotateX;
+    transform: $rotateX;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+
+    p {
+        color: white;
+        font-size: 22px;
+        padding: 18px;
+        text-align: center;
+    }
+
+    .btn {
+        color: $white;
+    }
+}
+
+.card {
+    border: none;
+    -webkit-box-shadow: 0px 0px 8px 3px $white;
+    box-shadow: 0px 0px 8px 3px $white;
+}

@@ -1,0 +1,13 @@
+@import "components/hijo";
+@import "components/padre";
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  height: 100vh;
+  font-size: 30px;
+}
+
+button {
+  width: 30px;
+}

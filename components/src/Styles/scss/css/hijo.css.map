@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EACF,gBAAgB,EAAE,aAAa;EAC/B,OAAO,EAAE,GAAG;EACZ,KAAK,EAAE,KAAK;CACf",
+    "sources": [
+        "../components/hijo.scss"
+    ],
+    "names": [],
+    "file": "hijo.css"
+}

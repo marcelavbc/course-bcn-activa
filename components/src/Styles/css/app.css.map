@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,KAAK,CAAC;EACF,gBAAgB,EAAE,aAAa;EAC/B,OAAO,EAAE,GAAG;EACZ,KAAK,EAAE,KAAK;CACf;;ACJD,AAAA,MAAM,CAAC;EACH,gBAAgB,EAAE,SAAS;EAC3B,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,QAAQ;CAClB;;AFDD,AAAA,IAAI,CAAC;EACD,WAAW,EAAE,oCAAoC;EACjD,sBAAsB,EAAE,WAAW;EACnC,uBAAuB,EAAE,SAAS;EAClC,UAAU,EAAE,MAAM;EAClB,UAAU,EAAE,KAAK;EACjB,SAAS,EAAE,IAAI;CAChB",
+    "sources": [
+        "../scss/app.scss",
+        "../scss/components/hijo.scss",
+        "../scss/components/padre.scss"
+    ],
+    "names": [],
+    "file": "app.css"
+}

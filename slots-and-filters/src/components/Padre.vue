@@ -4,7 +4,7 @@
       <ModalBootstrap>
         <div slot="header">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Conversor</h5>
+            <h5 class="modal-title" id="myModalLabel">Conversor</h5>
             <button
               type="button"
               class="close"
@@ -53,46 +53,7 @@
   </div>
 </template>
 
-<script>
-import ModalBootstrap from "./ModalBootstrap";
+<script src="../Scripts/padre.js"></script>
 
-export default {
-  components: { ModalBootstrap },
-  data() {
-    return {
-      euros: "",
-      isValid: true,
-      isClosed: false,
-    };
-  },
-  filters: {
-    currency(val) {
-      return (parseFloat(val) * 1.23).toLocaleString("en-US", {
-        style: "currency",
-        currency: "USD",
-      });
-    },
-    toEuros(val) {
-      return parseFloat(val).toLocaleString("es-ES", {
-        style: "currency",
-        currency: "EUR",
-      });
-    },
-  },
-  methods: {
-    isANumber() {
-      var reg = /^-?\d+\.?\d*$/;
-      if (reg.test(this.euros)) {
-        this.isValid = true;
-      } else {
-        this.isValid = false;
-      }
-    },
-    toggleModal() {
-      this.isClosed = !this.isClosed;
-      this.euros = "";
-    },
-  },
-};
-</script>
+
 

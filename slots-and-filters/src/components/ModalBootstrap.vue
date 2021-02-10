@@ -4,7 +4,7 @@
     id="exampleModal"
     tabindex="-1"
     role="dialog"
-    aria-labelledby="exampleModalLabel"
+    aria-labelledby="myModalLabel"
     aria-hidden="true"
     data-show="true"
   >
@@ -17,17 +17,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {};
-</script>
-
-<style >
-
-</style>
-
-
-
 
 
 

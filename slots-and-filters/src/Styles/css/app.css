@@ -31,16 +31,21 @@ span {
 }
 
 .closed-message .btn-open {
-  background-color: #308efa;
+  background-color: #002e63;
   font-size: 20px;
   color: white;
+}
+
+.closed-message .btn-open:hover {
+  color: #002e63;
+  background-color: #b3cfee;
 }
 
 .modal {
   display: inline !important;
 }
 
-.modal-content {
+.modal .modal-content {
   box-shadow: 0px 0px 15px -2px #002e63;
   border: none !important;
 }

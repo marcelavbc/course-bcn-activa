@@ -30,8 +30,12 @@ span {
     border-radius: 10px;
 
     .btn-open {
-        background-color: #308efa;
+        background-color: #002e63;
         font-size: 20px;
         color: white;
+        &:hover{
+            color: #002e63;
+            background-color: #b3cfee;
+        }
     }
 }

@@ -1,0 +1,37 @@
+.open {
+    display: inline;
+}
+
+.closed {
+    display: none;
+}
+
+.btn-close {
+    background-color: #002e63 !important;
+    color: white !important;
+}
+
+span {
+    font-weight: bold;
+    color: #002e63;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.closed-message {
+    font-size: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+
+    .btn-open {
+        background-color: #308efa;
+        font-size: 20px;
+        color: white;
+    }
+}

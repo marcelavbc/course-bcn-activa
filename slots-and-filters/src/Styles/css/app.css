@@ -1,0 +1,57 @@
+.open {
+  display: inline;
+}
+
+.closed {
+  display: none;
+}
+
+.btn-close {
+  background-color: #002e63 !important;
+  color: white !important;
+}
+
+span {
+  font-weight: bold;
+  color: #002e63;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.closed-message {
+  font-size: 30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.closed-message .btn-open {
+  background-color: #308efa;
+  font-size: 20px;
+  color: white;
+}
+
+.modal {
+  display: inline !important;
+}
+
+.modal-content {
+  box-shadow: 0px 0px 15px -2px #002e63;
+  border: none !important;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #2c3e50;
+  height: 100vh;
+  background: url("../../assets/money.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*# sourceMappingURL=app.css.map */

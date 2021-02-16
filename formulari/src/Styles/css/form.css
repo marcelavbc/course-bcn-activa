@@ -1,1 +1,43 @@
-/* No CSS *//*# sourceMappingURL=form.css.map */
+#theForm {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  color: white;
+  font-size: 14px;
+  background: #0546A4;
+  margin: 10px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+}
+
+#theForm #submitButton {
+  background-color: #0546A4;
+  border: 2px solid white !important;
+  color: white;
+  margin-top: 15px;
+}
+
+.modal-content {
+  background: #e9edf1;
+}
+
+.form-group {
+  margin-bottom: 8px;
+}
+
+.form-group .form-control {
+  height: 30px;
+}
+
+.form-group label {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 5px;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.show {
+  display: inline;
+}
+/*# sourceMappingURL=form.css.map */

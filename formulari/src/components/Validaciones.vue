@@ -1,62 +1,77 @@
 <template>
   <div :validate="_validation">
-    <slot v-bind="validateInput(input, id, inputType)" :_validation="(this.validate ? 'true' : 'false')"> </slot>
-    <p v-if="error">{{ message }}</p>
+    <slot
+      v-bind="validateInput(input, id, inputType, pass)"
+      :_validation="this.validate ? 'true' : 'false'"
+    >
+    </slot>
+    <p v-if="!validate">{{ message }}</p>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["input", "inputType", "id", "_validation"],
+  props: ["input", "inputType", "id", "_validation", "pass"],
   data() {
     return {
-      error: true,
       message: "",
-      validate: true
+      validate: false,
     };
   },
   methods: {
-    validateInput(input, id, inputType) {
+    validateInput(input, id, inputType, pass) {
       if (inputType === "text") {
         let reg = /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{5,12}$/;
-        if (reg.test(input)) {
-          this.error = false;
-          this.validate = true
-        } else {
-          this.error = true;
-          this.message = "name should have 6 to 13 letters";
+        this.checkRegex(reg, input);
+        if (!this.validate) {
+          this.message = "El nom ha de tenir de 6 a 13 lletres";
         }
       } else if (inputType === "number") {
         if (id === "mobile") {
           let reg = /^\d{9}$/;
-          if (reg.test(input)) {
-            this.error = false;
-          } else {
-            this.error = true;
-            this.message = "phone should have 9 numbers";
+          this.checkRegex(reg, input);
+          if (!this.validate) {
+            this.message = "El mòbil ha de tenir 9 dígits";
           }
         } else if (id === "zip") {
           let reg = /^\d{5}$/;
-          if (reg.test(input)) {
-            this.error = false;
-          } else {
-            this.error = true;
-            this.message = "zip should have 5 numbers";
+          this.checkRegex(reg, input);
+          if (!this.validate) {
+            this.message = "El codi postal ha de tenir 5 dígits";
           }
         }
       } else if (inputType === "email") {
         let reg = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
-        if (reg.test(input)) {
-          this.error = false;
-        } else {
-          this.error = true;
-          this.message = "should be an email address";
+        this.checkRegex(reg, input);
+        if (!this.validate) {
+          this.message = "Escrigui una adreça d'email vàlida";
+        }
+      } else if (inputType === "password") {
+        if (id === "password") {
+          let reg = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{5,12}$/;
+          this.checkRegex(reg, input);
+          if (!this.validate) {
+            this.message =
+              "La contrasenya ha de tenir de 6 a 13 caràcters, lletres majúscules, minúscules i dígits";
+          }
+        }
+        if (id === "validPass") {
+          if (input === pass) {
+            this.validate = true;
+          } else {
+            this.validate = false;
+            if (!this.validate && input !== "") {
+              this.message = "La contrasenya no coincideix";
+            }
+          }
         }
       }
     },
-    
+    checkRegex(reg, input) {
+      let that = this;
+      return reg.test(input) ? (that.validate = true) : (that.validate = false);
+    },
   },
-
 };
 </script>
 

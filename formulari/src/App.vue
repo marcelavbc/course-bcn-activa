@@ -1,9 +1,7 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-  <div id="app" class="container">
-    <div class="row">
-        <Formulario></Formulario>
-    </div>
+  <div id="app" class="container-fluid">
+    <Formulario></Formulario>
   </div>
 </template>
 

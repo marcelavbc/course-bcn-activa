@@ -116,7 +116,7 @@
         aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLongTitle">
@@ -189,8 +189,8 @@ export default {
         theInput.classList.add("is-invalid");
         // theInput.classList.remove("is-valid");
         console.log("error", event.target.attributes);
-      } 
-      if (event.target.attributes[3].value === "true"){
+      }
+      if (event.target.attributes[3].value === "true") {
         theInput.classList.add("is-valid");
         theInput.classList.remove("is-invalid");
         console.log("valid", event.target.attributes);

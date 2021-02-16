@@ -16,8 +16,6 @@
         color: white;
         margin-top: 15px;
     }
-
-
 }
 
 .modal-content {
@@ -38,7 +36,10 @@
         width: 50%;
     }
 }
-
+.modal-backdrop
+{
+    opacity:0.5 !important;
+}
 .show {
     display: inline
 }

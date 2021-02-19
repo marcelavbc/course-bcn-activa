@@ -1,0 +1,136 @@
+@import "helpers/variables";
+
+html {
+    background-color: $light-bg;
+}
+#app {
+    padding-top: 20px;
+    background-color: $light-bg;
+
+    .title {
+        text-align: center;
+        color: $color-primary;
+        font-size: 2rem;
+        background-color: $light-green;
+        padding: 5px 0;
+        margin: 0;
+
+        @media only screen and (min-width: 768px) {
+            font-size: 3rem;
+        }
+    }
+
+    /*RADIOBUTTON COMPONENT*/
+
+    .radio {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        margin: 25px 0;
+
+        @media only screen and (min-width: 768px) {
+            justify-content: space-evenly;
+            font-size: 1.2rem
+        }
+
+        .custom-radio .custom-control-input:checked~.custom-control-label::before {
+            background-color: $color-primary;
+            border-color: $color-primary;
+        }
+    }
+
+    /*SEARCHBAR COMPONENT*/
+
+    .search-container {
+        @media only screen and (min-width: 768px) {
+            margin-bottom: 45px;
+        }
+
+        .genre-container {
+            display: flex;
+            justify-content: center;
+            margin: 15px 0;
+
+            @media only screen and (min-width: 768px) {
+                margin: 0;
+            }
+
+            #genreBtn {
+                background-color: $color-primary;
+                color: $light-bg;
+                border: $color-primary;
+            }
+        }
+    }
+
+    /*CHECKGENGER COMPONENT*/
+    .genre {
+        justify-content: space-around;
+        margin-bottom: 25px;
+
+        .custom-control-label {
+            background-color: $light-green;
+            width: 100%;
+            margin-bottom: 5px;
+            padding: 2px;
+            border-radius: 2px;
+            font-size: 1.1rem
+        }
+
+        .custom-control-input:checked~.custom-control-label::before {
+            background-color: #354345;
+            border-color: #354345;
+            border-radius: 20%;
+        }
+
+        .custom-control-input:checked+.custom-control-label {
+            color: $light-bg;
+            background-color: $color-primary;
+        }
+    }
+
+    /* GENDER SELECTED LIST*/
+    .list-gender-selected {
+        .selected-list {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .theList {
+            margin: 0px 5px 5px 0px;
+            padding: 0px 5px;
+            background: $light-green;
+            border-radius: 5px;
+        }
+    }
+
+
+    /* MOVIECARD */
+
+
+    #theCards {
+        .card {
+            display: inline-block;
+            // -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+            //     5px 5px 15px 5px rgba(0, 0, 0, 0);
+            // box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+            //     5px 5px 15px 5px rgba(0, 0, 0, 0);
+            // border: 0;
+
+        }
+
+        .not-avaliable {
+            background-color: rgb(212, 211, 211);
+
+        }
+
+        .avaliable {
+            background-color: $light-green;
+        }
+
+  
+    }
+
+}

@@ -1,0 +1,124 @@
+/*COLORS*/
+html {
+  background-color: #f8f6f2;
+}
+
+#app {
+  padding-top: 20px;
+  background-color: #f8f6f2;
+  /*RADIOBUTTON COMPONENT*/
+  /*SEARCHBAR COMPONENT*/
+  /*CHECKGENGER COMPONENT*/
+  /* GENDER SELECTED LIST*/
+  /* MOVIECARD */
+}
+
+#app .title {
+  text-align: center;
+  color: #354345;
+  font-size: 2rem;
+  background-color: #b3d0c9;
+  padding: 5px 0;
+  margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  #app .title {
+    font-size: 3rem;
+  }
+}
+
+#app .radio {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin: 25px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  #app .radio {
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+  }
+}
+
+#app .radio .custom-radio .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #354345;
+  border-color: #354345;
+}
+
+@media only screen and (min-width: 768px) {
+  #app .search-container {
+    margin-bottom: 45px;
+  }
+}
+
+#app .search-container .genre-container {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  #app .search-container .genre-container {
+    margin: 0;
+  }
+}
+
+#app .search-container .genre-container #genreBtn {
+  background-color: #354345;
+  color: #f8f6f2;
+  border: #354345;
+}
+
+#app .genre {
+  justify-content: space-around;
+  margin-bottom: 25px;
+}
+
+#app .genre .custom-control-label {
+  background-color: #b3d0c9;
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 2px;
+  border-radius: 2px;
+  font-size: 1.1rem;
+}
+
+#app .genre .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #354345;
+  border-color: #354345;
+  border-radius: 20%;
+}
+
+#app .genre .custom-control-input:checked + .custom-control-label {
+  color: #f8f6f2;
+  background-color: #354345;
+}
+
+#app .list-gender-selected .selected-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+#app .list-gender-selected .theList {
+  margin: 0px 5px 5px 0px;
+  padding: 0px 5px;
+  background: #b3d0c9;
+  border-radius: 5px;
+}
+
+#app #theCards .card {
+  display: inline-block;
+}
+
+#app #theCards .not-avaliable {
+  background-color: #d4d3d3;
+}
+
+#app #theCards .avaliable {
+  background-color: #b3d0c9;
+}
+/*# sourceMappingURL=app.css.map */

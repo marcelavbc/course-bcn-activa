@@ -1,25 +1,34 @@
 <template>
   <div class="container">
-    <h3>Vuex Movies Search</h3>
-    <div class="row">
-      <div class="col-12 radio">
-        <search-bar></search-bar>
+    <h3 class="text-center title">Vuex Movies Search</h3>
+    <radio-button></radio-button>
+    <search-bar></search-bar>
+    <div class="list-gender-selected" v-if="genresSelected.length > 0">
+      <div class="selected-list">
+        <div class="theList" v-for="genre in genresSelected" :key="genre">
+          <span class="genreSelected">{{ genre }}</span>
+          <br />
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-12 radio">
-        <radio-button></radio-button>
-      </div>
-    </div>
-
-    <div class="row movies-row">
-      <movie-card v-for="movie in filtered" :key="movie.id">
-        <h5 class="card-title">{{ movie.name }}</h5>
-        <p>Disponible: {{ movie.availability }}</p>
-        <h6 class="card-subtitle mb-2 text-muted">{{ movie.genre }}</h6>
-        <p class="card-text">
-          {{ movie.description }}
-        </p>
+    <check-genre></check-genre>
+    <div class="row movies-row" id="theCards">
+      <movie-card v-for="movie in moviesList" :key="movie.id">
+        <div
+          class="card not-avaliable body"
+          :class="{ avaliable: movie.availability }"
+        >
+          <div class="d-flex flex-column">
+            <h4 class="card-title text-center">{{ movie.name }}</h4>
+            <h5 class="card-subtitle my-2 text-muted align-self-end">
+              {{ movie.genre }}
+            </h5>
+            <!-- <p class="availability">Disponible: {{ movie.availability }}</p> -->
+          </div>
+          <p class="card-text">
+            {{ movie.description }}
+          </p>
+        </div>
       </movie-card>
     </div>
   </div>
@@ -28,26 +37,33 @@
 <script>
 import MovieCard from "../movies/MovieCard";
 import SearchBar from "../SearchBar";
-import RadioButton from "../RadioButton";
-import { mapState } from "vuex";
-import { mapGetters } from "vuex";
+import RadioButton from "../RadioButton.vue";
+import CheckGenre from "../CheckGenre";
+
 import { mapActions } from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
   components: {
     MovieCard,
     SearchBar,
     RadioButton,
+    CheckGenre,
   },
   computed: {
-    ...mapState(["movies", "moviesFiltered"]),
-    ...mapGetters(["allMovies", "filtered","radioBtn"]),
+    ...mapGetters(["moviesList", "genresSelected"]),
   },
   methods: {
-    ...mapActions(["filterRadio"]),
+    ...mapActions(["searchMovie", "loadMovies", "setHeight"]),
+  },
+  beforeMount() {
+    this.loadMovies();
+  },
+  mounted() {
+    this.setHeight();
+  },
+  beforeUpdate() {
+    this.setHeight();
   },
 };
 </script>
-
-<style scoped>
-</style>

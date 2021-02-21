@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <div class="col-12 radio">
+    <div class="col-12 radio mb-1">
       <div class="custom-control custom-radio">
         <input
           type="radio"

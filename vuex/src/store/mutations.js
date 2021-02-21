@@ -21,17 +21,18 @@ export default {
     loadMovies(state) {
         state.moviesFiltered = state.movies
     },
-    setHeight(state) {
-        console.log(state)
+    setHeight() {
         let row = document.getElementById("theCards");
+        console.log("the row", row)
         let cards = row.getElementsByClassName("card");
         let array = [...cards];
         let divArray = [];
         for (let i = 0; i < array.length; i += 1) {
             divArray.push(array[i].clientHeight);
         }
+        console.log(divArray)
         let max = Math.max(...divArray) + "px";
-        console.log('max', max)
+        console.log(max)
         for (let j = 0; j < cards.length; j++) {
             cards.item(j).style.height = max
         }

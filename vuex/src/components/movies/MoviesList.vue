@@ -2,6 +2,7 @@
   <div class="container">
     <h3 class="text-center title">Vuex Movies Search</h3>
     <radio-button></radio-button>
+    <hr />
     <search-bar></search-bar>
     <div class="list-gender-selected" v-if="genresSelected.length > 0">
       <div class="selected-list">
@@ -14,20 +15,24 @@
     <check-genre></check-genre>
     <div class="row movies-row" id="theCards">
       <movie-card v-for="movie in moviesList" :key="movie.id">
-        <div
-          class="card not-avaliable body"
-          :class="{ avaliable: movie.availability }"
-        >
-          <div class="d-flex flex-column">
-            <h4 class="card-title text-center">{{ movie.name }}</h4>
-            <h5 class="card-subtitle my-2 text-muted align-self-end">
-              {{ movie.genre }}
-            </h5>
-            <!-- <p class="availability">Disponible: {{ movie.availability }}</p> -->
+        <div class="card">
+          <div
+            class="card-header not-avaliable"
+            :class="{ avaliable: movie.availability }"
+          >
+            <h5 class="m-0 movie-title">{{ movie.name }}</h5>
           </div>
-          <p class="card-text">
-            {{ movie.description }}
-          </p>
+          <div class="card-body">
+            <div class="d-flex flex-column">
+              <h5 class="card-title text-muted align-self-end m-0">
+                {{ movie.genre }}
+              </h5>
+              <p v-if="movie.availability" class="m-0">Avaliable</p>
+              <p v-else class="m-0">Not avaliable</p>
+            </div>
+            <hr class="card-divisor"/>
+            <p class="card-text">{{ movie.description }}</p>
+          </div>
         </div>
       </movie-card>
     </div>
@@ -60,9 +65,11 @@ export default {
     this.loadMovies();
   },
   mounted() {
+    console.log('mounted')
     this.setHeight();
   },
-  beforeUpdate() {
+  updated() {
+    console.log('updated')
     this.setHeight();
   },
 };

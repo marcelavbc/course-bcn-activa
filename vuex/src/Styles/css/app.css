@@ -114,8 +114,25 @@ html {
   display: inline-block;
 }
 
+#app #theCards .card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+#app #theCards .card .card-body .card-title {
+  margin: 5px;
+}
+
+#app #theCards .card .card-body .card-divisor {
+  width: 100%;
+}
+
+#app #theCards .card .movie-title {
+  color: #354345;
+}
+
 #app #theCards .not-avaliable {
-  background-color: #d4d3d3;
+  background-color: #d8d5d5;
 }
 
 #app #theCards .avaliable {

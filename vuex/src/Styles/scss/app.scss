@@ -3,6 +3,7 @@
 html {
     background-color: $light-bg;
 }
+
 #app {
     padding-top: 20px;
     background-color: $light-bg;
@@ -91,6 +92,7 @@ html {
     }
 
     /* GENDER SELECTED LIST*/
+
     .list-gender-selected {
         .selected-list {
             display: flex;
@@ -113,16 +115,29 @@ html {
     #theCards {
         .card {
             display: inline-block;
-            // -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
-            //     5px 5px 15px 5px rgba(0, 0, 0, 0);
-            // box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
-            //     5px 5px 15px 5px rgba(0, 0, 0, 0);
-            // border: 0;
+
+            .card-body {
+                display: flex;
+                flex-direction: column;
+
+                .card-title {
+                    margin: 5px
+                }
+
+                .card-divisor {
+                    width: 100%;
+                }
+
+                
+            }
+            .movie-title {
+                color: $color-primary;
+            }
 
         }
 
         .not-avaliable {
-            background-color: rgb(212, 211, 211);
+            background-color: rgb(216, 213, 213);
 
         }
 
@@ -130,7 +145,7 @@ html {
             background-color: $light-green;
         }
 
-  
+
     }
 
 }

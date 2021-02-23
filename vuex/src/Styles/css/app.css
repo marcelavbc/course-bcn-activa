@@ -139,4 +139,9 @@ html {
 #app #theCards .avaliable {
   background-color: #b3d0c9;
 }
+
+#app .alert {
+  background-color: rgba(190, 184, 184, 0.5);
+  color: #354345;
+}
 /*# sourceMappingURL=app.css.map */

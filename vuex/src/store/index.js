@@ -13,7 +13,8 @@ const store = createStore({
             radio: 'all',
             check: [],
             showGenres: false,
-            maxHeight: ''
+            maxHeight: '',
+            notFound: false
         }
     },
     getters: rootGetters,

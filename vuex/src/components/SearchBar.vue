@@ -13,8 +13,10 @@
         />
       </div>
     </div>
-    <div class="col-12 col-md-4 genre-container" >
-      <button id="genreBtn" class="btn btn-primary" @click="toggleGenres">Show Genres</button>
+    <div class="col-12 col-md-4 genre-container">
+      <button id="genreBtn" class="btn btn-primary" @click="toggleGenres">
+        Show Genres
+      </button>
     </div>
   </div>
 </template>

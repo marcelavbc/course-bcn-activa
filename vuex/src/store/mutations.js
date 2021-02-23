@@ -26,7 +26,11 @@ export default {
                     movie.name.toLowerCase().includes(state.inputSearch.toLowerCase()) && movie.availability === true);
             }
         }
-
+        if (state.moviesFiltered.length === 0) {
+            state.notFound = true
+        } else {
+            state.notFound = false
+        }
     },
     loadMovies(state) {
         state.moviesFiltered = state.movies;

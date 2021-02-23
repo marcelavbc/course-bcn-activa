@@ -13,6 +13,7 @@
       </div>
     </div>
     <check-genre></check-genre>
+    <not-avaliable v-if="notFound"></not-avaliable>
     <div class="row movies-row" id="theCards">
       <movie-card v-for="movie in moviesList" :key="movie.id">
         <div class="card">

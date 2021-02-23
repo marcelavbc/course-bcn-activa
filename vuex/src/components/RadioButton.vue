@@ -10,7 +10,7 @@
           @change="searchMovie"
           checked="checked"
           value="all"
-          v-model="this.$store.state.radio"
+          v-model="inputRadio"
         />
         <label class="custom-control-label" for="allMovies">All movies</label>
       </div>
@@ -22,7 +22,7 @@
           class="custom-control-input"
           @change="searchMovie"
           value="avaliable"
-          v-model="this.$store.state.radio"
+          v-model="inputRadio"
         />
         <label class="custom-control-label" for="avaliableMovies"
           >Avaliable Movies</label
@@ -32,12 +32,4 @@
   </div>
 </template>
 
-<script>
-import { mapActions } from "vuex";
-
-export default {
-  methods: {
-    ...mapActions(["searchMovie"]),
-  },
-};
-</script>
+<script src="../Scripts/radioButton.js"></script>

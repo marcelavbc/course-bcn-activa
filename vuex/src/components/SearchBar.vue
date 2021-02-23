@@ -9,7 +9,7 @@
           aria-label="Search"
           aria-describedby="basic-addon1"
           @keyup="searchMovie"
-          v-model="this.$store.state.inputSearch"
+          v-model="inputSearch"
         />
       </div>
     </div>
@@ -19,12 +19,4 @@
   </div>
 </template>
 
-<script>
-import { mapActions } from "vuex";
-
-export default {
-  methods: {
-    ...mapActions(["searchMovie", "toggleGenres"]),
-  },
-};
-</script>
+<script src="../Scripts/searchBar.js"></script>

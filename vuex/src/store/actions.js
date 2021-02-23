@@ -1,14 +1,15 @@
 export default {
     searchMovie(context) {
-        context.commit('searchMovie')
+        context.commit('searchMovie');
     },
     loadMovies(context) {
-        context.commit('loadMovies')
+        context.commit('loadMovies');
     }, 
     toggleGenres(context){
-        context.commit('toggleGenres')
+        context.commit('toggleGenres');
     }, 
     setHeight(context){
-        context.commit('setHeight')
+        context.commit('setHeight');
     }
+    
 }

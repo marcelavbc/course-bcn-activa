@@ -30,7 +30,7 @@
               <p v-if="movie.availability" class="m-0">Avaliable</p>
               <p v-else class="m-0">Not avaliable</p>
             </div>
-            <hr class="card-divisor"/>
+            <hr class="card-divisor" />
             <p class="card-text">{{ movie.description }}</p>
           </div>
         </div>
@@ -39,38 +39,4 @@
   </div>
 </template>
 
-<script>
-import MovieCard from "../movies/MovieCard";
-import SearchBar from "../SearchBar";
-import RadioButton from "../RadioButton.vue";
-import CheckGenre from "../CheckGenre";
-
-import { mapActions } from "vuex";
-import { mapGetters } from "vuex";
-
-export default {
-  components: {
-    MovieCard,
-    SearchBar,
-    RadioButton,
-    CheckGenre,
-  },
-  computed: {
-    ...mapGetters(["moviesList", "genresSelected"]),
-  },
-  methods: {
-    ...mapActions(["searchMovie", "loadMovies", "setHeight"]),
-  },
-  beforeMount() {
-    this.loadMovies();
-  },
-  mounted() {
-    console.log('mounted')
-    this.setHeight();
-  },
-  updated() {
-    console.log('updated')
-    this.setHeight();
-  },
-};
-</script>
+<script src="../../Scripts/moviesList.js"></script>

@@ -6,7 +6,7 @@
         class="custom-control-input"
         id="comedy"
         value="Comedy"
-        v-model="this.$store.state.check"
+        v-model="getMoviesGenres"
         @change="searchMovie"
       />
       <label class="custom-control-label" for="comedy">Comedy</label>
@@ -17,7 +17,7 @@
         class="custom-control-input"
         id="documentary"
         value="Documentary"
-        v-model="this.$store.state.check"
+        v-model="getMoviesGenres"
         @change="searchMovie"
       />
       <label class="custom-control-label" for="documentary">Documentary</label>
@@ -28,7 +28,7 @@
         class="custom-control-input"
         id="action"
         value="Action"
-        v-model="this.$store.state.check"
+        v-model="getMoviesGenres"
         @change="searchMovie"
       />
       <label class="custom-control-label" for="action">Action</label>
@@ -39,7 +39,7 @@
         class="custom-control-input"
         id="sci-Fi"
         value="Sci-Fi"
-        v-model="this.$store.state.check"
+        v-model="getMoviesGenres"
         @change="searchMovie"
       />
       <label class="custom-control-label" for="sci-Fi">Sci-Fi</label>
@@ -50,7 +50,7 @@
         class="custom-control-input"
         id="war"
         value="War"
-        v-model="this.$store.state.check"
+        v-model="getMoviesGenres"
         @change="searchMovie"
       />
       <label class="custom-control-label" for="war">War</label>
@@ -61,7 +61,7 @@
         class="custom-control-input"
         id="romance"
         value="Romance"
-        v-model="this.$store.state.check"
+        v-model="getMoviesGenres"
         @change="searchMovie"
       />
       <label class="custom-control-label" for="romance">Romance</label>
@@ -72,7 +72,7 @@
         class="custom-control-input"
         id="drama"
         value="Drama"
-        v-model="this.$store.state.check"
+        v-model="getMoviesGenres"
         @change="searchMovie"
       />
       <label class="custom-control-label" for="drama">Drama</label>
@@ -83,7 +83,7 @@
         class="custom-control-input"
         id="musical"
         value="Musical"
-        v-model="this.$store.state.check"
+        v-model="getMoviesGenres"
         @change="searchMovie"
       />
       <label class="custom-control-label" for="musical">Musical</label>
@@ -94,7 +94,7 @@
         class="custom-control-input"
         id="crime"
         value="Crime"
-        v-model="this.$store.state.check"
+        v-model="getMoviesGenres"
         @change="searchMovie"
       />
       <label class="custom-control-label" for="crime">Crime</label>
@@ -105,7 +105,7 @@
         class="custom-control-input"
         id="horror"
         value="Horror"
-        v-model="this.$store.state.check"
+        v-model="getMoviesGenres"
         @change="searchMovie"
       />
       <label class="custom-control-label" for="horror">Horror</label>
@@ -116,7 +116,7 @@
         class="custom-control-input"
         id="animation"
         value="Animation"
-        v-model="this.$store.state.check"
+        v-model="getMoviesGenres"
         @change="searchMovie"
       />
       <label class="custom-control-label" for="animation">Animation</label>
@@ -127,7 +127,7 @@
         class="custom-control-input"
         id="western"
         value="Western"
-        v-model="this.$store.state.check"
+        v-model="getMoviesGenres"
         @change="searchMovie"
       />
       <label class="custom-control-label" for="western">Western</label>
@@ -135,17 +135,5 @@
   </div>
 </template>
 
-<script>
-import { mapActions } from "vuex";
-import { mapState } from "vuex";
-
-export default {
-  methods: {
-    ...mapActions(["searchMovie"]),
-  },
-  computed: {
-    ...mapState(["showGenres"]),
-  },
-};
-</script>
+<script src="../Scripts/checkGenre.js"></script>
 

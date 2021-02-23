@@ -2,6 +2,7 @@ import { createStore } from 'vuex'
 import movies from '../../movies'
 import rootMutations from './mutations';
 import rootActions from './actions';
+import rootGetters from './getters'
 
 const store = createStore({
     state() {
@@ -12,20 +13,10 @@ const store = createStore({
             radio: 'all',
             check: [],
             showGenres: false,
+            maxHeight: ''
         }
     },
-    getters: {
-        moviesList(state){
-            return state.moviesFiltered
-        },
-        allMovies(state){
-            return state.movies
-        }, 
-        genresSelected(state){
-            return state.check
-        }, 
-        
-    },
+    getters: rootGetters,
     mutations: rootMutations,
     actions: rootActions
 });

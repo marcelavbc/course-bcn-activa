@@ -112,6 +112,7 @@ html {
 
 #app #theCards .card {
   display: inline-block;
+  width: 100%;
 }
 
 #app #theCards .card .card-body {
@@ -132,7 +133,7 @@ html {
 }
 
 #app #theCards .not-avaliable {
-  background-color: #d8d5d5;
+  background-color: rgba(190, 184, 184, 0.5);
 }
 
 #app #theCards .avaliable {

@@ -80,8 +80,8 @@ html {
         }
 
         .custom-control-input:checked~.custom-control-label::before {
-            background-color: #354345;
-            border-color: #354345;
+            background-color: $color-primary;
+            border-color: $color-primary;
             border-radius: 20%;
         }
 
@@ -111,10 +111,10 @@ html {
 
     /* MOVIECARD */
 
-
     #theCards {
         .card {
             display: inline-block;
+            width: 100%;
 
             .card-body {
                 display: flex;
@@ -127,25 +127,20 @@ html {
                 .card-divisor {
                     width: 100%;
                 }
-
-                
             }
+
             .movie-title {
                 color: $color-primary;
             }
-
         }
 
         .not-avaliable {
-            background-color: rgb(216, 213, 213);
+            background-color: $light-grey;
 
         }
 
         .avaliable {
             background-color: $light-green;
         }
-
-
     }
-
 }

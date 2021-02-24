@@ -2,11 +2,12 @@ import MovieCard from "../components/movies/MovieCard.vue";
 import SearchBar from "../components/SearchBar.vue";
 import RadioButton from "../components/RadioButton.vue";
 import CheckGenre from "../components/CheckGenre.vue";
-import NotAvaliable from "../components/NotAvaliable.vue"
+import NotAvaliable from "../components/NotAvaliable.vue";
+import Appear from "../components/utils/Appear.vue"
 
 import { mapActions } from "vuex";
 import { mapGetters } from "vuex";
-import {mapState} from "vuex"
+import { mapState } from "vuex"
 
 export default {
   components: {
@@ -14,7 +15,8 @@ export default {
     SearchBar,
     RadioButton,
     CheckGenre,
-    NotAvaliable
+    NotAvaliable,
+    Appear
   },
   computed: {
     ...mapGetters(["moviesList", "genresSelected"]),
@@ -29,7 +31,7 @@ export default {
   mounted() {
     this.setHeight();
   },
-  updated(){
+  updated() {
     this.setHeight();
   }
 };

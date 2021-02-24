@@ -113,6 +113,7 @@ html {
 #app #theCards .card {
   display: inline-block;
   width: 100%;
+  position: relative;
 }
 
 #app #theCards .card .card-body {

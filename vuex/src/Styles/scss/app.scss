@@ -115,6 +115,7 @@ html {
         .card {
             display: inline-block;
             width: 100%;
+            position:relative;
 
             .card-body {
                 display: flex;
@@ -143,8 +144,11 @@ html {
             background-color: $light-green;
         }
     }
+
     .alert {
         background-color: $light-grey;
         color: $color-primary;
     }
+
+    
 }

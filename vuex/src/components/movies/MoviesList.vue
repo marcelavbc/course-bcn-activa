@@ -1,9 +1,15 @@
 <template>
   <div class="container">
-    <h3 class="text-center title">Vuex Movies Search</h3>
-    <radio-button></radio-button>
+    <Appear :translate="[0, '-100px']">
+      <h3 class="text-center title">Vuex Movies Search</h3>
+    </Appear>
+    <Appear :translate="['100px', 0]" delay="500">
+      <radio-button></radio-button>
+    </Appear>
     <hr />
-    <search-bar></search-bar>
+    <Appear :translate="['-100px', 0]" delay="700">
+      <search-bar></search-bar>
+    </Appear>
     <div class="list-gender-selected" v-if="genresSelected.length > 0">
       <div class="selected-list">
         <div class="theList" v-for="genre in genresSelected" :key="genre">

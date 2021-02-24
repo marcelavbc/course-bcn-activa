@@ -3,7 +3,9 @@
     <div class="col-12 d-flex align-items-center justify-content-center">
       <form @submit.prevent="submitForm" id="theForm">
         <div class="form-group">
-          <label>Nom:</label>
+          <Appear :delay="500" :translate="['-100px', 0]">
+            <label>Nom:</label>
+          </Appear>
           <Validaciones :input="fullName" :id="'name'" :inputType="'text'">
             <template scope="{_validation}">
               <input
@@ -19,7 +21,9 @@
         </div>
 
         <div class="form-group">
-          <label>Mòbil:</label>
+          <Appear :delay="700" :translate="['-100px', 0]">
+            <label>Mòbil:</label>
+          </Appear>
           <Validaciones :input="mobile" :id="'mobile'" :inputType="'number'">
             <template scope="{_validation}">
               <input
@@ -34,7 +38,9 @@
           </Validaciones>
         </div>
         <div class="form-group">
-          <label>Codi Postal:</label>
+          <Appear :delay="900" :translate="['-100px', 0]">
+            <label>Codi Postal:</label>
+          </Appear>
           <Validaciones :input="zip" :id="'zip'" :inputType="'number'">
             <template scope="{_validation}">
               <input
@@ -49,7 +55,9 @@
           </Validaciones>
         </div>
         <div class="form-group">
-          <label>E-mail:</label>
+          <Appear :delay="1100" :translate="['-100px', 0]">
+            <label>E-mail:</label>
+          </Appear>
           <Validaciones :input="email" :id="'email'" :inputType="'email'">
             <template scope="{_validation}">
               <input
@@ -63,8 +71,11 @@
             </template>
           </Validaciones>
         </div>
+
         <div class="form-group">
-          <label>Contrasenya:</label>
+          <Appear :delay="1300" :translate="['-100px', 0]">
+            <label>Contrasenya:</label>
+          </Appear>
           <Validaciones
             :input="password"
             :id="'password'"
@@ -82,8 +93,11 @@
             </template>
           </Validaciones>
         </div>
+
         <div class="form-group">
-          <label>Confirm Contrasenya:</label>
+          <Appear :delay="1500" :translate="['-100px', 0]">
+            <label>Confirm Contrasenya:</label>
+          </Appear>
           <Validaciones
             :input="validPass"
             :id="'validPass'"
@@ -102,11 +116,12 @@
             </template>
           </Validaciones>
         </div>
-        <button id="submitButton" type="submit" class="btn btn-primary">
-          Submit
-        </button>
+        <Appear :delay="1900" :duration="900">
+          <button id="submitButton" type="submit" class="btn btn-primary">
+            Submit
+          </button>
+        </Appear>
       </form>
-
       <!-- Modal -->
       <div
         class="modal col"
@@ -147,9 +162,10 @@
 
 <script>
 import Validaciones from "../components/Validaciones";
+import Appear from "../components/utils/Appear";
 
 export default {
-  components: { Validaciones },
+  components: { Validaciones, Appear },
   data() {
     return {
       fullName: "",

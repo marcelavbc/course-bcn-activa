@@ -8,8 +8,6 @@ import NotFound from '../views/NotFound.vue'
 import Freezen from '../views/shop/Freezen.vue'
 import Food from '../views/shop/Food.vue'
 
-
-
 const routes = [
   {
     path: '/',

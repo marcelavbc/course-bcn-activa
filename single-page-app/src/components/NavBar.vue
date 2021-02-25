@@ -42,12 +42,8 @@
               class="dropdown-menu pl-2"
               aria-labelledby="navbarDropdownMenuLink"
             >
-              <p>
-                <router-link :to="{ name: 'Food' }">Alimentaciò</router-link>
-              </p>
-              <p>
-                <router-link :to="{ name: 'Freezen' }">Congelats</router-link>
-              </p>
+              <p @click="goFood">Alimentació</p>
+              <p @click="goFreezen">Congelats</p>
             </div>
           </li>
         </ul>
@@ -57,7 +53,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    goFood() {
+      this.$router.push({ name: "Food" });
+    },
+    goFreezen() {
+      this.$router.push({ name: "Freezen" });
+    },
+  },
+};
 </script>
 
 <style>

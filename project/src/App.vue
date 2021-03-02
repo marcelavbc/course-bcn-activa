@@ -1,20 +1,29 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/users">Users</router-link> |
-    <router-link to="/albums">Albums</router-link>
+  <div class="container-fluid">
+    <the-navbar></the-navbar>
+    <router-view />
+    <the-footer></the-footer>
   </div>
-  <router-view />
 </template>
 
+<script>
+import TheNavbar from "../src/components/navbar/TheNavbar";
+import TheFooter from "../src/components/footer/TheFooter";
+
+export default {
+  components: { TheNavbar, TheFooter },
+};
+</script>
+
 <style>
+.container-fluid {
+  padding: 0 !important;
+}
+
+
+
+/* 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
 }
 
 #nav {
@@ -28,5 +37,5 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
-}
+} */
 </style>

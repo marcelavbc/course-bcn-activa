@@ -1,13 +1,28 @@
 <template>
-  <div>
-      <h3>user Details page</h3>
-    <p>{{ name }}</p>
-    <p>{{ username }}</p>
-    <p>{{ email }}</p>
-    <p>{{ street }}</p>
-    <p>{{ suite }}</p>
-    <p>{{ zip }}</p>
-    <p>{{ city }}</p>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center my-3 title">
+        <h1>{{ name }}</h1>
+      </div>
+      <div class="col-6 user-card">
+        <card-info class="teste">
+          <p class="m-1"><span class="data-user">Name:</span> {{ name }}</p>
+          <p class="m-1">
+            <span class="data-user">Username:</span> {{ username }}
+          </p>
+          <p class="m-1"><span class="data-user">E-mail:</span> {{ email }}</p>
+          <p class="m-1"><span class="data-user">Phone:</span> {{ phone }}</p>
+          <p class="m-1"><span class="data-user">Address:</span></p>
+          <p class="m-1">{{ street }}, {{ suite }}</p>
+          <p class="m-1">{{ zip }}</p>
+          <p class="m-1">{{ city }}</p>
+          <p class="m-1">
+            <span class="data-user">Company:</span> {{ company }}
+          </p>
+          <p class="m-1"><span class="data-user">Web:</span> {{ website }}</p>
+        </card-info>
+      </div>
+    </div>
 
     <!-- <p>lat: {{ address.geo.lat }}</p>
     <p>lng: {{ address.geo.lng }}</p>
@@ -20,7 +35,29 @@
 
 <script>
 export default {
-  props: ["id", "name", "email", "username", "street", "suite", "zip", "city"],
-  
+  props: [
+    "id",
+    "name",
+    "email",
+    "username",
+    "street",
+    "suite",
+    "zip",
+    "city",
+    "phone",
+    "website",
+    "company",
+  ],
 };
 </script>
+
+<style scoped>
+.title {
+  color: #db007f;
+}
+.data-user {
+  color: #db007f;
+}
+
+
+</style>

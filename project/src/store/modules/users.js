@@ -8,14 +8,14 @@ const users = {
     },
     mutations: {
         SET_USERS(state, data) {
-            state.users = data
+            state.users = data;
         },
         loadUsersConsulted(state, payload) {
             let check = state.usersConsulted.findIndex(item => item.username === payload.username)
 
             if (check === -1) {
-                payload.count = 1
-                state.usersConsulted.push(payload)
+                payload.count = 1;
+                state.usersConsulted.push(payload);
             } else {
                 let userClicked = state.usersConsulted.find(item => item.id === payload.id)
                 userClicked.count++

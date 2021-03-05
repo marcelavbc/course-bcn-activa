@@ -141,6 +141,15 @@
   width: 50%;
 }
 
+.no-user {
+  background-color: rgba(219, 0, 127, 0.1);
+}
+
+.no-user h5 {
+  margin: 0;
+  padding: 10px 0;
+}
+
 .data-user {
   color: #087e8b;
 }
@@ -167,6 +176,52 @@
 @media only screen and (min-width: 768px) {
   .footer p {
     font-size: 1.2rem;
+  }
+}
+
+/*NOT FOUND VIEW*/
+.not-found-container {
+  background-color: #db007f;
+  min-height: calc(100vh - 95px);
+  display: flex;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media only screen and (min-width: 768px) {
+  .not-found-container h4, .not-found-container h5 {
+    font-size: 3rem;
+  }
+}
+
+.not-found-container .fa-exclamation-triangle {
+  font-size: 4rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .not-found-container .fa-exclamation-triangle {
+    font-size: 7rem;
+  }
+}
+
+.not-found-container .link {
+  margin: 0;
+  border: 1px solid white;
+  padding: 3px 9px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.not-found-container .link:hover {
+  background-color: white;
+  color: #db007f;
+}
+
+@media only screen and (min-width: 768px) {
+  .not-found-container .link {
+    font-size: 1.7rem;
   }
 }
 /*# sourceMappingURL=app.css.map */

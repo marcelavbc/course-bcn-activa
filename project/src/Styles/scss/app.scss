@@ -19,10 +19,11 @@
     margin-bottom: 0;
     align-self: center;
     width: 100%;
+
     @media only screen and (min-width: 768px) {
       font-size: 2.3rem;
     }
-  } 
+  }
 }
 
 .btn-see {
@@ -37,7 +38,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  justify-content: center; 
+  justify-content: center;
 }
 
 
@@ -45,6 +46,7 @@
 .fa-backward {
   color: $metallic;
   font-size: 2rem;
+
   @media only screen and (min-width: 768px) {
     font-size: 2.5rem;
   }
@@ -81,12 +83,11 @@
     text-decoration: none;
 
     &:hover {
-        color:$metallic
+      color: $metallic
     }
 
     @media only screen and (min-width: 768px) {
       font-size: 1.3rem
-      
     }
   }
 
@@ -134,7 +135,17 @@
   .data {
     font-size: 14px;
     width: 50%;
+  }
 
+
+}
+
+.no-user {
+  background-color: rgba(219, 0, 127, 0.1);
+
+  h5 {
+    margin: 0;
+    padding: 10px 0;
   }
 }
 
@@ -155,11 +166,56 @@
   color: white;
   display: flex;
   justify-content: space-between;
+
   p {
     margin: 0 5px;
     font-size: .8rem;
+
     @media only screen and (min-width: 768px) {
       font-size: 1.2rem
-    }  
+    }
+  }
+}
+
+/*NOT FOUND VIEW*/
+
+.not-found-container {
+  background-color: $fucsia;
+  min-height: calc(100vh - 95px);
+  display: flex;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  h4, h5{
+    @media only screen and (min-width: 768px) {
+      font-size: 3rem;
+    }
+  }
+
+  .fa-exclamation-triangle {
+    font-size: 4rem;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 7rem;
+    }
+  }
+
+  .link {
+    margin: 0;
+    border: 1px solid $white;
+    padding: 3px 9px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $white;
+      color: $fucsia;
+    }
+
+    @media only screen and (min-width: 768px) {
+      font-size: 1.7rem; 
+    }
   }
 }

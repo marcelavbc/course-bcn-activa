@@ -1,4 +1,5 @@
 import axios from 'axios'
+import router from '../../router/index';
 
 const albums = {
     namespaced: true,
@@ -53,6 +54,9 @@ const albums = {
                 })
                 .catch(error => console.log(error));
         },
+        changeRouteAlbums() {
+            router.push({ name: "Albums" });
+        }, 
     },
 }
 

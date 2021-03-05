@@ -30,6 +30,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/pictures/AlbumDetails.vue'),
     props: true
   },
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
+    component: () => import(/* webpackChunkName: "about" */ '../views/NotFound.vue')
+  },
 ]
 
 const router = createRouter({

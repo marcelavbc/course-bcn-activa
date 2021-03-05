@@ -1,7 +1,7 @@
 <template>
   <div class="container mb-5">
     <div class="row">
-      <div class="col-12 text-center my-3 header-title">
+      <div class="col-12 text-center my-4 header-title">
           <back-button></back-button>
         <h3 class="page-title">Albums</h3>
       </div>

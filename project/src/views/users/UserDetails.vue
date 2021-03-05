@@ -1,11 +1,11 @@
 <template>
   <div class="container mb-5">
     <div class="row justify-content-center">
-      <div class="col-12 text-center my-3 header-title">
+      <div class="col-12 text-center my-4 header-title">
         <back-button></back-button>
         <h3 class="page-title">{{name}}</h3>
       </div>
-      <div class="col">
+      <div class="col col-md-6">
         <card-info>
           <p class="m-1 text-justify w-100"><span class="data-user">Name:</span> {{ name }}</p>
           <p class="m-1 text-justify w-100">
@@ -24,13 +24,6 @@
         </card-info>
       </div>
     </div>
-
-    <!-- <p>lat: {{ address.geo.lat }}</p>
-    <p>lng: {{ address.geo.lng }}</p>
-    <p>{{ phone }}</p>
-    <p>{{ company.name }}</p>
-    <p>{{ company.catchPhrase }}</p>
-    <p>{{ company.bs }}</p> -->
   </div>
 </template>
 
@@ -52,11 +45,3 @@ export default {
 };
 </script>
 
-<style scoped>
-.title {
-  color: #db007f;
-}
-.data-user {
-  color: #db007f;
-}
-</style>

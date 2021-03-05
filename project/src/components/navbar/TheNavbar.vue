@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg" id="navbar">
+  <nav class="navbar navbar-expand-lg sticky-top" id="navbar">
     <router-link data-toggle="collapse" to="/" class="navbar-brand"
       ><img id="logo" src="../../assets/Itlogo.png"
     /></router-link>

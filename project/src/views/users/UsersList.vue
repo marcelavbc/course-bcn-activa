@@ -1,13 +1,13 @@
 <template>
-  <div class="container">
-    <div class="row info-user">
-      <div class="col-12 text-center my-3">
-        <h1>Users</h1>
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-12 text-center my-3 header-title">
+        <back-button></back-button>
+        <h3 class="page-title">Users</h3>
       </div>
-      <div class="col-md-3 mb-3" v-for="user in users" :key="user.id">
+      <div class="col-md-4 mb-3" v-for="user in allUsers" :key="user.id">
         <card-info>
-          <div class="info">
-            <p>{{ user.name }}</p>
+            <p>{{ user.name.toUpperCase() }}</p>
             <router-link
               :to="{
                 name: 'UserDetails',
@@ -22,15 +22,12 @@
                   city: user.address.city,
                   phone: user.phone,
                   website: user.website,
-                  company: user.company.name
+                  company: user.company.name,
                 },
               }"
             >
-              <button class="btn btn-see" @click="loadUsersConsulted(user)">
-                See user
-              </button>
+              <button-see @click="loadUsersConsulted(user)"></button-see>
             </router-link>
-          </div>
         </card-info>
       </div>
     </div>
@@ -38,12 +35,11 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
-import { mapMutations } from "vuex";
+import { mapMutations, mapGetters } from "vuex";
 
 export default {
   computed: {
-    ...mapState("users", ["users"]),
+    ...mapGetters("users", ["allUsers"]),
   },
   created() {
     this.$store.dispatch("users/loadUsers");
@@ -53,20 +49,3 @@ export default {
   },
 };
 </script>
-<style >
-.info-user h1 {
-  color: #db007f;
-}
-
-.btn-see {
-  background-color: #db007f;
-  color: white;
-}
-
-.info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-</style>

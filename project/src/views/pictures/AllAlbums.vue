@@ -1,24 +1,21 @@
 <template>
-  <div class="container">
-    <div class="row info-album mb-5">
-      <div class="col-12 text-center my-3">
-        <h1>Albums</h1>
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-12 text-center my-3 header-title">
+          <back-button></back-button>
+        <h3 class="page-title">Albums</h3>
       </div>
-      <div class="col-md-3 mb-3" v-for="(album, index) in albums" :key="index">
-        <card-info>
-          <div class="info">
-            <p>Album number {{ index }}</p>
+      <div class="col-md-4 mb-3" v-for="(album, index) in albums" :key="index">
+        <card-info >
+            <p>Album {{ index }}</p>
             <router-link
               :to="{
                 name: 'AlbumDetails',
                 params: { id: index, album: JSON.stringify(album) },
               }"
             >
-              <button class="btn btn-album" @click="loadAlbumsConsulted(album)">
-                See album
-              </button>
+            <button-see @click="loadAlbumsConsulted(album)"></button-see>
             </router-link>
-          </div>
         </card-info>
       </div>
     </div>
@@ -42,21 +39,3 @@ export default {
 };
 </script>
 
-<style scoped>
-.info-album h1 {
-  color: #db007f;
-}
-
-.btn-album {
-  background-color: white;
-  color: #db007f;
-  border-color: #db007f;
-}
-
-.info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-</style>

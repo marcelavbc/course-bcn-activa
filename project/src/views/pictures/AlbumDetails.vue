@@ -1,17 +1,25 @@
 <template>
-  <div class="container">
-    <div class="row justify-content-center my-3">
+  <div class="container mb-5">
+    <div class="row justify-content-center mt-3 details-container">
+      <div class="col-12">
+        <div class="back-button text-center w-100">
+        <back-button></back-button>
+      </div>
+        <h1 class="photos-title text-center my-3">Photos</h1>
+      </div>
       <div
-        class="col-md-3 mb-3"
+        class="col-md-4 mb-3"
         v-for="(data, index) in albumContent"
         :key="index"
       >
-        <card-info class="p-0">
-          <div class="pic-card">
-            <img class="mt-2" :src="data.thumbnailUrl" :alt="data.title" />
-            <p class="text-center align-self-end mt-3">{{ data.title }}</p>
+        <div class="pic-card">
+          <img class="mt-2" :src="data.thumbnailUrl" :alt="data.title" />
+          <div class="mt-2">
+            <p class="text-center">
+              {{ data.title }}
+            </p>
           </div>
-        </card-info>
+        </div>
       </div>
     </div>
   </div>
@@ -35,13 +43,20 @@ export default {
   height: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  border: 2px solid #db007f
 }
 
-.pic-card p{
-  background-color: #db007f;
-  width: 100%;
-  margin:0
+.pic-card p {
+  margin: 0!important
 }
+
+.details-container {
+  margin-bottom: 50px;
+}
+
+.photos-title {
+  color: #db007f;
+}
+
 </style>

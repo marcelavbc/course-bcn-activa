@@ -1,7 +1,11 @@
 <template>
   <div class="container-fluid">
     <the-navbar></the-navbar>
-    <router-view />
+    <router-view v-slot="{ Component }">
+      <appear :translate="['-100px', 0]">
+        <component :is="Component" />
+      </appear>
+    </router-view>
     <the-footer></the-footer>
   </div>
 </template>
@@ -15,27 +19,4 @@ export default {
 };
 </script>
 
-<style>
-.container-fluid {
-  padding: 0 !important;
-}
-
-
-
-/* 
-#app {
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-} */
-</style>
+<style src="./Styles/css/app.css"></style>

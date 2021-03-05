@@ -27,14 +27,14 @@ const albums = {
                 return result;
             }
 
-            let ids = findProp(state.albumConsulted, "albumId")
+            let ids = findProp(state.albumConsulted, "albumId");
 
             let check = ids.findIndex(item => item === payloadKey)
             if (check === -1) {
                 payload.count = 1;
                 state.albumConsulted.push(payload);
             } else {
-                let toAdd = state.albumConsulted.find(ele => ele.id === payload.id)
+                let toAdd = state.albumConsulted.find(ele => ele.id === payload.id);
                 toAdd.count++;
             }
         }
@@ -50,7 +50,6 @@ const albums = {
                         return c;
                     }, {});
                     commit('SET_ALBUMS', result);
-
                 })
                 .catch(error => console.log(error));
         },

@@ -1,0 +1,221 @@
+@import "helpers/variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container-fluid {
+  padding: 0 !important;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+
+  .page-title {
+    color: $fucsia;
+    margin-bottom: 0;
+    align-self: center;
+    width: 100%;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 2.3rem;
+    }
+  }
+}
+
+.btn-see {
+  background-color: $metallic !important;
+  color: $white !important;
+}
+
+.info-card {
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+
+/* BACKBUTTON */
+.fa-backward {
+  color: $metallic;
+  font-size: 2rem;
+
+  @media only screen and (min-width: 768px) {
+    font-size: 2.5rem;
+  }
+}
+
+/* NAVBAR */
+
+#navbar {
+  padding: 0 10px 0 0;
+  background-color: $black;
+
+  #logo {
+    width: 150px;
+
+    @media only screen and (min-width: 768px) {
+      width: 210px;
+    }
+  }
+
+  .navbar-toggler {
+    border: 2px solid $fucsia;
+
+    .fa-bars {
+      color: $fucsia;
+      font-size: 23px;
+    }
+  }
+
+  a {
+    margin-right: 35px;
+    font-weight: bold;
+    color: $white;
+    transition: transform .2s;
+    text-decoration: none;
+
+    &:hover {
+      color: $metallic
+    }
+
+    @media only screen and (min-width: 768px) {
+      font-size: 1.3rem
+    }
+  }
+
+  a.router-link-exact-active {
+    color: $fucsia;
+    text-decoration: none;
+  }
+
+  .navbar-collapse {
+    padding-left: 10px;
+
+    .navbar-nav {
+      justify-content: center;
+      width: 100%;
+    }
+
+    .form-control:focus {
+      outline: none !important;
+      border: 1px solid $fucsia;
+      box-shadow: 0 0 10px $fucsia;
+    }
+
+    .nav-item {
+      margin: 5px 0;
+    }
+  }
+}
+
+/* HOME */
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h5 {
+    color: $metallic;
+    margin-bottom: 15px;
+  }
+
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(219, 0, 127, 0.1);
+  }
+
+  .data {
+    font-size: 14px;
+    width: 50%;
+  }
+
+
+}
+
+.no-user {
+  background-color: rgba(219, 0, 127, 0.1);
+
+  h5 {
+    margin: 0;
+    padding: 10px 0;
+  }
+}
+
+.data-user {
+  color: $metallic;
+}
+
+/* ALBUM DETAILS */
+
+.subtitle {
+  color: $fucsia
+}
+
+/* FOOTER*/
+.footer {
+  padding: 15px 5px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    margin: 0 5px;
+    font-size: .8rem;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 1.2rem
+    }
+  }
+}
+
+/*NOT FOUND VIEW*/
+
+.not-found-container {
+  background-color: $fucsia;
+  min-height: calc(100vh - 95px);
+  display: flex;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  h4, h5{
+    @media only screen and (min-width: 768px) {
+      font-size: 3rem;
+    }
+  }
+
+  .fa-exclamation-triangle {
+    font-size: 4rem;
+
+    @media only screen and (min-width: 768px) {
+      font-size: 7rem;
+    }
+  }
+
+  .link {
+    margin: 0;
+    border: 1px solid $white;
+    padding: 3px 9px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $white;
+      color: $fucsia;
+    }
+
+    @media only screen and (min-width: 768px) {
+      font-size: 1.7rem; 
+    }
+  }
+}

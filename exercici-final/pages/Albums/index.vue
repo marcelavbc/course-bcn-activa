@@ -28,7 +28,20 @@ import CardInfo from "../../components/cards/CardInfo";
 import ButtonSee from "../../components/utils/ButtonSee";
 import BackButton from "../../components/utils/BackButton";
 export default {
+
   components: { CardInfo, ButtonSee, BackButton },
+  head() {
+    return {
+      title: "Albums",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "Dumb app",
+        },
+      ],
+    };
+  },
   computed: {
     ...mapGetters("albums", ["allAlbums"]),
   },

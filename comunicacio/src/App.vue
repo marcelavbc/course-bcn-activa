@@ -9,6 +9,6 @@
   </div>
 </template>
 
-<script src="./Scripts/app.js"></script >
+<script src="./Scripts/app.js"></script>
 
 <style src="./Styles/css/app.css"></style>

@@ -1,5 +1,7 @@
 let car: Car;
-let allCars: Array<{plate: string, color?: string, brand?:string, wheels:Array<{diameter: number, brand?: string}>}>;
+let allCars: [Object | Number] = new Array();
+
+//let allCars: Array<{plate: string, color?: string, brand?:string, wheels:Array<{diameter: number, brand?: string}>}>;
 
 function validatePlate(input:string){
     let regex = /^[0-9]{4}[A-Z]{3}$/;
@@ -16,13 +18,16 @@ function validateWheels(input:number){
 
 function containsCar(car:any, list:any) {
     let i;
-    for (i = 0; i < list.length; i++) {
-        if (list[i].plate === car) {
-            return true;
+    if(list !== undefined){
+        for (i = 0; i < list.length; i++) {
+            if (list[i].plate === car) {
+                return true;
+            }
         }
+        return false;
     }
-
-    return false;
+    return false
+    
 }
 
 const theWheels: HTMLElement | null = document.getElementById('wheelsDiv');
@@ -47,7 +52,6 @@ function getCarData(event){
     event.preventDefault();
     
     let errors = 0
-    
     const plate = plateInput.value.toUpperCase();
     const color = colorInput.value.toUpperCase();
     const brand = brandInput.value.toUpperCase();

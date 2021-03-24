@@ -1,6 +1,7 @@
 "use strict";
 let car;
-let allCars;
+let allCars = new Array();
+//let allCars: Array<{plate: string, color?: string, brand?:string, wheels:Array<{diameter: number, brand?: string}>}>;
 function validatePlate(input) {
     let regex = /^[0-9]{4}[A-Z]{3}$/;
     return regex.test(input) ? true : false;
@@ -15,10 +16,13 @@ function validateWheels(input) {
 }
 function containsCar(car, list) {
     let i;
-    for (i = 0; i < list.length; i++) {
-        if (list[i].plate === car) {
-            return true;
+    if (list !== undefined) {
+        for (i = 0; i < list.length; i++) {
+            if (list[i].plate === car) {
+                return true;
+            }
         }
+        return false;
     }
     return false;
 }
